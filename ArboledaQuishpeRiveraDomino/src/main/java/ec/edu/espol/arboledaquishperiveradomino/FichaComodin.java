@@ -39,10 +39,12 @@ public class FichaComodin extends Ficha{
         int lado2 = sc.nextInt();
         this.setLado2(lado2);
     }
-    
+
     @Override
     public String toString(){
         return "*" + super.toString()+"*";
     }
 }
+
+    
 
