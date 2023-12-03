@@ -111,6 +111,23 @@ public class ArboledaQuishpeRiveraDomino {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner sc= new Scanner(System.in);
+        sc.useDelimiter("\n");
+        Juego juego= new Juego();
+        System.out.print("Bienvenido al juego DOMINO\n Escoja el modo de juego (escriba 1 o 2) \n 1. Jugador vs Máquina \n 2. Jugador 1 vs Jugador 2\n Modo: ");
+        int modo = sc.nextInt();
+        
+        while (!(modo==1 || modo ==2)){
+            System.out.print("Opción no válida. (Escriba 1 o 2): ");
+            modo= sc.nextInt();
+        }
+        
+        if (modo==1){
+            ArboledaQuishpeRiveraDomino.modo1(juego, sc);
+        }
+        
+        else if (modo==2){
+            ArboledaQuishpeRiveraDomino.modo2(juego, sc);
+        }
     }
 }
