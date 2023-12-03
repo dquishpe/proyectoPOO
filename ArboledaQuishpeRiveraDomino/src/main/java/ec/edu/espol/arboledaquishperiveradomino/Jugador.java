@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author PERSONAL
  */
-public class Jugador {
+class Jugador {
     String nombre;
     ArrayList<Ficha> manoJugador;
     int posibilidades;
