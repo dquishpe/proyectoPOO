@@ -57,7 +57,7 @@ public class ArboledaQuishpeRiveraDomino {
     }
     
     public static void modo1(Juego juego, Scanner sc){
-        System.out.print("Ingrese el nombre del jugador: ");
+        System.out.print("Ingrese el nombre del jugador #1: ");
         String nombrej= sc.next();
         juego.setJugadores(nombrej);
         Jugador jugador= juego.getJugadores().get(0);
@@ -80,6 +80,34 @@ public class ArboledaQuishpeRiveraDomino {
         
         else System.out.println("Empate entre los jugadores: "+ jugador.getNombre()+ " y " + maquina.getNombre);
       
+    }
+    
+    public static void modo2(Juego juego, Scanner sc){
+        System.out.print("Ingrese el nombre del jugador #1: ");
+        String nombrej1= sc.next();
+        juego.setJugadores(nombrej1);
+        System.out.print("Ingrese el nombre del jugador #2: ");
+        String nombrej2= sc.next();
+        juego.setJugadores(nombrej2);
+        
+        Jugador jugador1= juego.getJugadores().get(0);
+        Jugador jugador2= juego.getJugadores().get(1);
+        
+        jugador1.posibilidades =6;
+        jugador2.posibilidades= 6;
+        
+        while (!jugador1.manoJugador.isEmpty()&&!jugador2.manoJugador.isEmpty()&&(!((jugador1.posibilidades==0)&&(jugador2.posibilidades==0)))){
+            turno(jugador1, juego, sc);
+            turno(jugador2,juego, sc);
+        }
+        
+        if (jugador1.manoJugador.size() < jugador2.manoJugador.size())
+            System.out.println("Ganó el jugador #1: "+ jugador1.getNombre());
+        
+        else if (jugador1.manoJugador.size() > jugador2.manoJugador.size())
+            System.out.println("Ganó el jugador #2: "+ jugador2.getNombre());
+        
+        else System.out.println("Empate entre los jugadores: "+ jugador1.getNombre()+ " y " + jugador2.getNombre);     
     }
 
     public static void main(String[] args) {
