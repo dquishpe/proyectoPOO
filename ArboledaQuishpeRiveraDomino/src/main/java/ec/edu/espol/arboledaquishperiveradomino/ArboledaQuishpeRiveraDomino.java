@@ -23,7 +23,7 @@ public class ArboledaQuishpeRiveraDomino {
             System.out.println("Posibilidades: " + jugador.posibilidades);
             if (jugador.posibilidades > 0 ){
                 for (Ficha f: jugador.manoJugador){
-                    if (Jugador.posibleFichaLinea(f, juego)){
+                    if (Jugador.posibleFichaALinea(f, juego)){
                         juego.agregarFichaLinea(f,jugador);
                         System.out.println("Movimiento válido");
                         break;
@@ -78,7 +78,7 @@ public class ArboledaQuishpeRiveraDomino {
             
             System.out.println("Ganó el jugador #2: "+ maquina.getNombre());
         
-        else System.out.println("Empate entre los jugadores: "+ jugador.getNombre()+ " y " + maquina.getNombre);
+        else System.out.println("Empate entre los jugadores: "+ jugador.getNombre()+ " y " + maquina.getNombre());
       
     }
     
@@ -107,7 +107,7 @@ public class ArboledaQuishpeRiveraDomino {
         else if (jugador1.manoJugador.size() > jugador2.manoJugador.size())
             System.out.println("Ganó el jugador #2: "+ jugador2.getNombre());
         
-        else System.out.println("Empate entre los jugadores: "+ jugador1.getNombre()+ " y " + jugador2.getNombre);     
+        else System.out.println("Empate entre los jugadores: "+ jugador1.getNombre()+ " y " + jugador2.getNombre());     
     }
 
     public static void main(String[] args) {

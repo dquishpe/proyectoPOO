@@ -4,6 +4,7 @@
  */
 package ec.edu.espol.arboledaquishperiveradomino;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -36,7 +37,7 @@ public class Juego {
     }
     
     public ArrayList<Ficha> getLineaJuego(){
-        return jugadores;
+        return lineaJuego;
     }
     
     public ArrayList<Jugador> getJugadores(){
