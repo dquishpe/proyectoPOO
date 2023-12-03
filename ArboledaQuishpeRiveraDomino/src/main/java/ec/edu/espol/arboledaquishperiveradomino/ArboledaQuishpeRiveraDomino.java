@@ -55,6 +55,32 @@ public class ArboledaQuishpeRiveraDomino {
         }
         
     }
+    
+    public static void modo1(Juego juego, Scanner sc){
+        System.out.print("Ingrese el nombre del jugador: ");
+        String nombrej= sc.next();
+        juego.setJugadores(nombrej);
+        Jugador jugador= juego.getJugadores().get(0);
+        JugadorMaquina maquina = new JugadorMaquina();
+        juego.setJugadores(maquina);
+        jugador.posibilidades = 6;
+        maquina.posibilidades = 6;
+        
+        while (!jugador.manoJugador.isEmpty()&&!maquina.manoJugador.isEmpty()&&(!((jugador.posibilidades==0)&&(maquina.posibilidades==0)))){
+            turno(jugador, juego, sc);
+            turno(maquina,juego, sc);
+        }
+        
+        if (jugador.manoJugador.size() < maquina.manoJugador.size())
+            System.out.println("Ganó el jugador #1: "+ jugador.getNombre());
+        
+        else if (jugador.manoJugador.size() > maquina.manoJugador.size())
+            
+            System.out.println("Ganó el jugador #2: "+ maquina.getNombre());
+        
+        else System.out.println("Empate entre los jugadores: "+ jugador.getNombre()+ " y " + maquina.getNombre);
+      
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
