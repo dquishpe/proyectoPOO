@@ -101,6 +101,7 @@ public class Juego {
                 else if(lineaJuego.get(0).getLado1() == (f.getLado2()) || lineaJuego.get(lineaJuego.size()-1).getLado2() == f.getLado1()){
                     if (lineaJuego.get(0).getLado1() == f.getLado2() && !(lineaJuego.get(lineaJuego.size()-1).getLado2() == (f.getLado1()))){
                         lineaJuego.add(0, f);
+                        j.removerFicha(f);
                     }
                     else if(!(lineaJuego.get(0).getLado1() ==  f.getLado2()) && lineaJuego.get(lineaJuego.size()-1).getLado2() == f.getLado1()){
                         lineaJuego.add(f);

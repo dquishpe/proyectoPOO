@@ -19,6 +19,7 @@ public class ArboledaQuishpeRiveraDomino {
             jugador.imprimirMano();
             System.out.print("Línea de juego: ");
             juego.mostrarLinea();
+            jugador.posibilidades= 0;
             jugador.posibilidades(juego);
             System.out.println("Posibilidades: " + jugador.posibilidades);
             if (jugador.posibilidades > 0 ){
