@@ -34,6 +34,7 @@ public class ArboledaQuishpeRiveraDomino {
             else System.out.println("Movimiento no válido");
             System.out.print("Nueva Línea de juego: ");
             juego.mostrarLinea();
+            System.out.println("\n");
         }
         else {
             System.out.print("Jugador " + jugador.getNombre()+ ": Mano -> ");
@@ -52,7 +53,8 @@ public class ArboledaQuishpeRiveraDomino {
             if (valido) System.out.println("Movimiento válido");
             else System.out.println("Movimiento no válido");
             System.out.print("Nueva Línea de juego: ");
-            juego.mostrarLinea();          
+            juego.mostrarLinea();
+            System.out.println("\n");
         }
         
     }
